@@ -1,0 +1,41 @@
+13. SI_2025_lab1_222045>git fetch origin - Со ова ги земаме најновите информации за гранките од remote repo и ги ажурираме во нашиот local repo.
+
+14. git switch 4-sort-tasks-by-priority - со помош на switch се префрлам на првата гранка кој ја избрав
+
+15. Извршувам промена 
+
+16.git add SI2025Lab1Main.java - за променетито документ да ко качиме на runнing strage
+
+git commit -m "Sort tasks by priority" - ова ја зачувува промената на локалната гранка и следно ќе треаб да се ашурира и гранката во remot repo.
+[4-sort-tasks-by-priority 6ea4a84] Sort tasks by priority
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+17.git push origin  4-sort-tasks-by-priority - со ова ја ажурирам гранката во remot repo
+
+18. Креирав 
+
+19. Го поновувам процеост од горе за сите 3  issue.
+
+20. Ги одобрив со клик на копчето pull рељуест.
+
+21. Issues се префрлено во полето Done.
+
+22. При спојување се здобив со конфликт. Конфликотт се појавува при првата гранка Remove a task by name.
+Го поправив проблемот и сега ги имаме истите чекори:
+git add SI2025Lab1Main.java
+git commit -m "Resolved merge conflict in removeTask method"
+
+git checkout master за да спојам со master
+и со git merge 1-remove-a-task-by-name  2-find-all-completed-tasks  4-sort-tasks-by-priority спојувам
+
+и добивам 
+git branch --merged
+  1-remove-a-task-by-name
+  2-find-all-completed-tasks
+  4-sort-tasks-by-priority
+* master
+
+23. 
+git fetch origin
+
+git push origin master

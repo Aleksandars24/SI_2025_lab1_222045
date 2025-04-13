@@ -1,0 +1,27 @@
+*   659536a Resolved merge conflict in removeTask method
+|\  
+| *   a1718e8 Merge pull request #11 from Aleksandars24/2-find-all-completed-tasks
+| |\  
+| * \   658bc51 Merge pull request #12 from Aleksandars24/1-remove-a-task-by-name
+| |\ \  
+| * \ \   220c636 Merge pull request #10 from Aleksandars24/4-sort-tasks-by-priority
+| |\ \ \  
+| | \ \ \     
+|  \ \ \ \    
+*-. \ \ \ \   7e16444 Resolved merge conflict in removeTask method
+|\ \ \ \ \ \  
+| |_|_|_|/ /  
+|/| | | | /   
+| | |_|_|/    
+| |/| | |     
+| | * | | 11b4947 Remove a task by name
+| | | |/  
+| | |/|   
+| | * | 6ea4a84 Sort tasks by priority
+| | |/  
+| * / 35a78d3 Find all completed tasks
+| |/  
+* / dcb2426 Implement remove task by name
+|/  
+* cb5077d Add starter code
+* deff451 Initial commit
