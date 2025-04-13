@@ -64,13 +64,13 @@ class TaskManager {
 
     // 1. Remove a task by name
     public void removeTask(String name) {
-        tasks.removeIf(task -> task.getName().equalsIgnoreCase(name));
+            return tasks.removeIf(task -> task.getName().equalsIgnoreCase(name.trim()));
     }
 
     // 2. Find all completed tasks
     public List<Task> getCompletedTasks() {
         // TODO: Implement logic to return completed tasks
-        return new ArrayList<>();
+        return tasks.stream().filter(Task::isCompleted).collect(Collectors.toList());
     }
 
     // 3. List tasks sorted by name
@@ -80,7 +80,9 @@ class TaskManager {
 
     // 4. Sort tasks by priority
     public void sortTasksByPriority() {
-        // TODO: Implement sorting by priority logic
+        List<Task> sortedTasks = tasks.stream()
+                .sorted(Comparator.comparing(Task::getPriority).reversed())
+                .collect(Collectors.toList());
     }
 
     // 5. Filter tasks by category
