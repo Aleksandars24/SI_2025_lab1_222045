@@ -80,7 +80,9 @@ class TaskManager {
 
     // 4. Sort tasks by priority
     public void sortTasksByPriority() {
-        // TODO: Implement sorting by priority logic
+        List<Task> sortedTasks = tasks.stream()
+                .sorted(Comparator.comparing(Task::getPriority).reversed())
+                .collect(Collectors.toList());
     }
 
     // 5. Filter tasks by category
