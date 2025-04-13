@@ -64,13 +64,21 @@ class TaskManager {
 
     // 1. Remove a task by name
     public void removeTask(String name) {
-        // TODO: Implement removal logic
+        Iterator<Task> iterator = tasks.iterator();
+        while (iterator.hasNext()) {
+            Task task = iterator.next();
+            if (task.getName().equalsIgnoreCase(name.trim())) {
+                iterator.remove();
+                return true;
+            }
+        }
+        return false;
     }
 
     // 2. Find all completed tasks
     public List<Task> getCompletedTasks() {
         // TODO: Implement logic to return completed tasks
-        return new ArrayList<>();
+        return tasks.stream().filter(Task::isCompleted).collect(Collectors.toList());
     }
 
     // 3. List tasks sorted by name
